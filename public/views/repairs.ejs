@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoShop</title>
+    <link rel="shortcut icon" href="./picture/logo.png" type="image/png">
+    <link rel="stylesheet" href="/css/repairs.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <%- include('nav.ejs', {addpart: addpart}) -%>
+    <div class="mainmainbox">
+        <div class="mainbox">
+          <h1>Repairs</h1>
+            <div class="secondbox">
+                <div>
+                    <% for (let i = 0; i < rp.length; i++) { %>
+                    <div class="item">
+                        <div class="boxid">
+                            <a href="/repairinfo/<%= rp[i].repairID %>">RepairsID: <%= rp[i].repairID %></a>
+                        </div>
+                        <div class="boxbtn">
+                            <a href="/deleterepair/<%= rp[i].repairID %>">x</a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <video autoplay muted loop src="./picture/move.mp4" type="video/mp4"></video>
+  </body>
+</html>
+

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tilt Neon", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mainmainbox{
+    width: 100%;
+    padding: 20px 0;
+    height: 90vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.mainbox{
+    flex-shrink: 1;
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.685);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainbox h1{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #ffd335;
+}
+
+.mainbox > a{
+    font-family: "Kanit", sans-serif;
+    color: #ffd335;
+    text-decoration: none;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.secondbox{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding-bottom: 20px;
+}
+
+.secondbox > div{
+    background-color: #92c1cb;
+    height: 100%;
+    width: 80%;
+    height: 400px;
+    border-radius: 30px 0 0 30px;
+    font-weight: 600;
+    font-size: 36px;
+    color: #222222;
+    padding: 30px;
+    overflow-y: scroll;
+}
+
+.secondbox  .item{
+    border-bottom: 3px solid #fff;
+    padding: 10px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secondbox  .item > .boxid{
+    font-size: 20px;
+}
+
+.secondbox  .item > .boxid > a{
+    color: #000;
+    transition: all .2s;
+}
+
+.secondbox  .item > .boxid > a:hover{
+    color: yellow;
+}
+
+.secondbox  .item > .boxbtn{
+    font-size: 25px;
+}
+
+.secondbox  .item > .boxbtn > a{
+    color: #fff;
+    transition: all .2s;
+}
+
+.secondbox  .item > .boxbtn > a:hover{
+    color: red;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+video{
+    filter: brightness(70%);
+    filter: blur(3px);
+    display: block;
+    position: absolute;
+    z-index: -1;
+    transform: scale(2,2);
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.secondbox > div::-webkit-scrollbar {
+    display: block;
+    border-radius: 10px;
+    width: 7px;
+    background-color: rgb(236, 236, 236);
+}
+  
+.secondbox > div::-webkit-scrollbar-thumb {
+    display: block;
+   background-color: rgb(238, 238, 140);
+   border-radius: 15px;
+}
+  

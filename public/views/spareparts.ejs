@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoShop</title>
+    <link rel="shortcut icon" href="./picture/logo.png" type="image/png">
+    <link rel="stylesheet" href="/css/spareparts.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <%- include('nav.ejs', {addpart: addpart}) -%>
+    <div class="mainmainbox">
+      <% for (let i = 0; i < sp.length; i++) { %>
+        <div class="mainbox">
+          <% if (i == 0) { %> 
+            <h1>SpareParts</h1>
+          <% } %>
+            <div class="secondbox">
+              <div>
+                <img src="/picture/products/<%= sp[i].url %>" alt="">
+              </div>
+              <div>
+                <p>SparePartID: <%= sp[i].spareID %></p>
+                <p>SupplierID: <%= sp[i].spareID %></p>
+                <p>Name: <%= sp[i].name %></p>
+                <p>Price: <%= sp[i].price %></p>
+                <p>Quantity: <%= sp[i].quantity %> left</p>
+                <a href="/editpart/<%= sp[i].spareID %>">แก้ไข</a>
+                <a href="/deletepart/<%= sp[i].spareID %>">X</a>
+              </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+    <video autoplay muted loop src="./picture/move.mp4" type="video/mp4"></video>
+  </body>
+</html>
+
