@@ -5,31 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AutoShop</title>
     <link rel="shortcut icon" href="./picture/logo.png" type="image/png">
-    <link rel="stylesheet" href="/css/addpart.css">
+    <link rel="stylesheet" href="/css/addsupplier.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
     <%- include('nav.ejs', {addpart: addpart, addcustomer: addcustomer, addsupplier: addsupplier, addrepair: addrepair}) -%>;
     <div class="mainmainbox">
         <div class="mainbox">
-          <h1>Add Parts</h1>
+          <h1>Add Supplier</h1>
             <div class="secondbox">
                 <div>
-                    <form method="post" action="/addpart" enctype="multipart/form-data">
-                        <label for="">Supplier <span>(ชื่อผู้จำหน่าย)</span> </label>
-                        <input type="text" name="supplier" id="">
+                    <form method="post" action="/addsupplier">
                         <label for="">Name</label>
                         <input type="text" name="name" id="">
-                        <label for="">Price</label>
-                        <input type="text" name="price" id="">
-                        <label for="">Quantity</label>
-                        <input type="text" name="quantity" id="">
-                        <label for="">Image</label>
-                        <input type="file" name="image" id="">
+                        <label for="">Phonenumber</label>
+                        <input type="text" name="phonenumber" id="">
+                        <label for="">Address</label>
+                        <input type="text" name="address" id="">
                         <input type="submit" value="Submit"/>
                     </form>
                 </div>

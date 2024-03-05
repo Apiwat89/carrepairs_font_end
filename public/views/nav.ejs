@@ -8,6 +8,12 @@
             <li><a href="/customers">Customers</a></li>
             <% if (addpart) { %>
                 <li ><a href="/addpart" style="color: tomato;text-shadow: 0 0 5px #ffffff5b;">เพิ่ม Part</a></li>
+            <% } else if (addcustomer) { %>
+                <li ><a href="/addcustomer" style="color: tomato;text-shadow: 0 0 5px #ffffff5b;">เพิ่ม Customer</a></li>
+            <% } else if (addsupplier) { %>
+                <li ><a href="/addsupplier" style="color: tomato;text-shadow: 0 0 5px #ffffff5b;">เพิ่ม Supplier</a></li>
+            <% } else if (addrepair) { %>
+                <li ><a href="/addrepair" style="color: tomato;text-shadow: 0 0 5px #ffffff5b;">เพิ่ม Repair</a></li>
             <% } %>
         </ul>
     </nav>
