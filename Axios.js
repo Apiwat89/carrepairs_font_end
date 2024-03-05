@@ -5,7 +5,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const multer = require('multer');
 
-const base_url = "http://localhost:3000";
+const base_url = "https://carrepairs-back-end.onrender.com";
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'/public/views'));
