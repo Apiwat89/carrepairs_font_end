@@ -19,11 +19,28 @@
           <h1>Add Repair</h1>
             <div class="secondbox">
                 <div>
+                  <% if (check) { %>
+                    <div class="fail">
+                      <p>Please enter the customer name correctly or enter the product name correctly.</p>
+                    </div>
+                  <% } %>
                     <form method="post" action="/addrepair">
                         <label for="">Customer <span>(ชื่อลูกค้า)</span> </label>
-                        <input type="text" name="customer" id="">
+                        <div class="serch-customer">
+                          <div class="row">
+                            <input type="text" name="customer" id="input-customer">
+                          </div>
+                        </div>
+                        <div class="result-customer"></div>
+
                         <label for="">Spare <span>(ชื่อสินค้า)</span></label>
-                        <input type="text" name="spare" id="">
+                        <div class="serch-spare">
+                          <div class="row">
+                            <input type="text" name="spare" id="input-spare">
+                          </div>
+                        </div>
+                        <div class="result-spare"></div>
+
                         <label for="">mechanicName</label>
                         <input type="text" name="mechanic" id="">
                         <input type="submit" value="Submit"/>
@@ -33,6 +50,11 @@
         </div>
     </div>
     <video autoplay muted loop src="./picture/move.mp4" type="video/mp4"></video>
+    <script>
+      const data_cm = <%- JSON.stringify(data_cm) %>;
+      const data_sp = <%- JSON.stringify(data_sp) %>; 
+    </script>
+    <script src="/autorepair.js"></script>
   </body>
 </html>
 

@@ -79,19 +79,19 @@ video{
 }
 
 .secondbox{
-    height: 100%;
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 70%;
     padding-bottom: 20px;
     overflow-y: scroll;
+    background-color: #92c1cb;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;    
 }
 
-
 .secondbox > div{
-    background-color: #92c1cb;
     width: 70%;
-    height: 700px;
+    height: 100%;
     border-radius: 30px;
     font-weight: 600;
     font-size: 36px;
@@ -112,9 +112,14 @@ video{
 
 .secondbox div input{
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     font-size: 20px;
+    width: 100%;
+}
+
+.secondbox div input[type='submit'] {
+    margin-bottom: 20px;
 }
 
 span {
@@ -122,4 +127,55 @@ span {
     font-family: "Kanit", sans-serif;
     font-weight: 500;
     font-style: normal;
+}
+
+.serch-supplier {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.serch-supplier .row {
+    display: flex;
+}
+
+.serch-supplier .row input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.result-supplier {
+    background: white;
+    margin-top: -22px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.result-supplier ul {
+    padding: 5px 5px;
+    border-top: 1px solid rgb(154, 154, 154);
+}
+
+.result-supplier ul li {
+    font-size: 20px;
+    list-style: none;
+    border-radius: 3px;
+    padding: 5px 5px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.result-supplier ul li:hover {
+    background-color: #cee4ff;
+}
+
+.fail {
+    font-size: 19px;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(255, 127, 127);
+    border-radius: 10px;
 }

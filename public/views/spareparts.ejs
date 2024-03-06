@@ -25,7 +25,12 @@
               </div>
               <div>
                 <p>SparePartID: <%= sp[i].spareID %></p>
-                <p>SupplierID: <%= sp[i].spareID %></p>
+                <% 
+                  let supplierID = null;
+                  if (sp[i].supplierID < 10 && sp[i].supplierID > 0) supplierID = '00' + sp[i].supplierID;
+                  else if (sp[i].supplierID < 100 && sp[i].supplierID >= 10) supplierID = '0' + sp[i].supplierID;
+                %>
+                <p>SupplierID: <%= supplierID %></p>
                 <p>Name: <%= sp[i].name %></p>
                 <p>Price: <%= sp[i].price %></p>
                 <p>Quantity: <%= sp[i].quantity %> left</p>

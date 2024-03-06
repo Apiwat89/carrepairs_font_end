@@ -79,19 +79,20 @@ video{
 }
 
 .secondbox{
-    height: 100%;
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 70%;
     padding-bottom: 20px;
     overflow-y: scroll;
+    background-color: #92c1cb;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;    
 }
 
 
 .secondbox > div{
-    background-color: #92c1cb;
     width: 70%;
-    height: 480px;
+    height: 100%;
     border-radius: 30px;
     font-weight: 600;
     font-size: 36px;
@@ -117,9 +118,72 @@ video{
     font-size: 20px;
 }
 
+.secondbox div input[type='submit'] {
+    margin-bottom: 20px;
+}
+
+
 span {
     color: red;
     font-family: "Kanit", sans-serif;
     font-weight: 500;
     font-style: normal;
+}
+
+.serch-customer,
+.serch-spare {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.serch-customer .row,
+.serch-spare .row {
+    display: flex;
+}
+
+.serch-customer .row input,
+.serch-spare .row input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.result-customer,
+.result-spare {
+    background: white;
+    margin-top: -22px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.result-customer ul,
+.result-spare ul {
+    padding: 5px 5px;
+    border-top: 1px solid rgb(154, 154, 154);
+}
+
+.result-customer ul li,
+.result-spare ul li {
+    font-size: 20px;
+    list-style: none;
+    border-radius: 3px;
+    padding: 5px 5px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.result-customer ul li:hover,
+.result-spare ul li:hover {
+    background-color: #cee4ff;
+}
+
+.fail {
+    font-size: 19px;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(255, 127, 127);
+    border-radius: 10px;
 }

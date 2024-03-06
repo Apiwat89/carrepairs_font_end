@@ -19,24 +19,37 @@
           <h1>Add Parts</h1>
             <div class="secondbox">
                 <div>
-                    <form method="post" action="/addpart" enctype="multipart/form-data">
-                        <label for="">Supplier <span>(ชื่อผู้จำหน่าย)</span> </label>
-                        <input type="text" name="supplier" id="">
-                        <label for="">Name</label>
-                        <input type="text" name="name" id="">
-                        <label for="">Price</label>
-                        <input type="text" name="price" id="">
-                        <label for="">Quantity</label>
-                        <input type="text" name="quantity" id="">
-                        <label for="">Image</label>
-                        <input type="file" name="image" id="">
-                        <input type="submit" value="Submit"/>
-                    </form>
+                  <% if (check) { %>
+                    <div class="fail">
+                      <p>Please enter the correct supplier name or upload a photo.</p>
+                    </div>
+                  <% } %>
+                  <form method="post" action="/addpart" enctype="multipart/form-data">
+                    <label for="">Supplier <span>(ชื่อผู้จำหน่าย)</span> </label>
+                    <div class="serch-supplier">
+                      <div class="row">
+                        <input type="text" name="supplier" id="input-supplier">
+                      </div>
+                    </div>
+                    <div class="result-supplier"></div>
+                    <label for="">Name</label>
+                    <input type="text" name="name" id="">
+                    <label for="">Price</label>
+                    <input type="text" name="price" id="">
+                    <label for="">Quantity</label>
+                    <input type="text" name="quantity" id="">
+                    <label for="">Image</label>
+                    <input type="file" name="image" id="">
+                    <input type="submit" value="Submit"/>
+                  </form>
                 </div>
             </div>
         </div>
     </div>
     <video autoplay muted loop src="./picture/move.mp4" type="video/mp4"></video>
+    <script>
+      const data_spl = <%- JSON.stringify(data_spl) %>;
+    </script>
+    <script src="/autosupplier.js"></script>
   </body>
 </html>
-
