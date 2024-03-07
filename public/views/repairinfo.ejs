@@ -18,9 +18,21 @@
           <h1>Repairs</h1>
             <div class="secondbox">
               <div>
-                <p>RepairID: <%= rp_one.repairID %></p>
-                <p>CustomerID: <%= rp_one.customerID %></p>
-                <p>SparePartID: <%= rp_one.spareID %></p>
+                <% 
+                  let repairID = null;
+                  let customerID = null;
+                  if (rp_one.repairID < 10) repairID = '0' + rp_one.repairID;
+                  else repairID = rp_one.repairID;
+
+                  if (cm_one.customerID < 10) customerID = '000' + cm_one.customerID;
+                  else if (cm_one.customerID < 100) customerID = '00' + cm_one.customerID;
+                  else if (cm_one.customerID < 1000) customerID = '0' + cm_one.customerID;
+                  else customerID = cm_one.repairID;
+                %> 
+                <p>RepairID: <%= repairID %></p>
+                <p>SparePartID: <%= rp_one.spareID %> is <%= sp_one.name %></p>
+                <p>CustomerID: <%= customerID %> is <%= cm_one.name %></p>
+                <p>CarCode: <%= cm_one.carcode %> </p>
                 <p>MechanicName: <%= rp_one.mechanicName %></p>
                 <a href="/repairs">Back</a>
               </div>

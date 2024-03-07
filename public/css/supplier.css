@@ -87,31 +87,47 @@ body{
 }
 
 .secondbox  .item > .boxid{
-    font-size: 20px;
+    font-size: 18px;
+    width: 80%; 
+    text-align: center;
 }
 
-.secondbox  .item > .boxid > a{
-    color: #000;
-    transition: all .2s;
+.secondbox a{
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
-.secondbox  .item > .boxid > a:hover{
-    color: yellow;
+.secondbox .item table {
+    width: 75%;
+}
+
+.secondbox .item table td{
+    width: 25%;
 }
 
 .secondbox  .item > .boxbtn{
     font-size: 25px;
 }
 
-.secondbox  .item > .boxbtn > a{
+.secondbox  .item > .boxbtn > a:nth-of-type(1){
+    color: #fff;
+    transition: all .2s;
+    margin-right: 20px;
+}
+
+.secondbox  .item > .boxbtn > a:nth-of-type(1):hover{
+    color: yellow;
+}
+
+.secondbox  .item > .boxbtn > a:nth-of-type(2){
     color: #fff;
     transition: all .2s;
 }
 
-.secondbox  .item > .boxbtn > a:hover{
-    color: red;
+.secondbox  .item > .boxbtn > a:nth-of-type(2):hover{
+    color: rgb(255, 0, 0);
 }
-
 
 img{
     width: 100%;
@@ -134,13 +150,29 @@ video{
 
 .secondbox > div::-webkit-scrollbar {
     display: block;
+    border-radius: 10px;
     width: 7px;
     background-color: rgb(236, 236, 236);
 }
   
-.secondbox > div::-webkit-scrollbar-thumb {
+.secondbox > div::-webkit-scrollbar-thumb { 
     display: block;
    background-color: rgb(238, 238, 140);
    border-radius: 15px;
 }
-  
+
+.boxid2 {
+    font-size: 25px;
+}
+
+.boxid2 table {
+    width: 55%;
+}
+
+.boxid2 table td{
+    text-align: center;
+}
+
+.boxid2 table td:nth-of-type(3) {
+    text-align: right;
+}

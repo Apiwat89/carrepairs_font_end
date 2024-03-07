@@ -18,12 +18,31 @@
           <h1>Repairs</h1>
             <div class="secondbox">
                 <div>
+                  <div class="boxid2">
+                    <table>
+                      <td><a>RepairsID</a></td>
+                      <td><a>Customer</a></td>
+                      <td><a>CarCode</a></td>
+                      <td><a>Mechanic</a></td>
+                    </table>
+                  </div>
                     <% for (let i = 0; i < rp.length; i++) { %>
                     <div class="item">
                         <div class="boxid">
-                            <a href="/repairinfo/<%= rp[i].repairID %>">RepairsID: <%= rp[i].repairID %></a>
+                          <table>
+                            <% 
+                              let repairID = null;
+                              if (rp[i].repairID < 10) repairID = '0' + rp[i].repairID;
+                              else repairID = rp[i].repairID;
+                            %> 
+                            <td><a><%= repairID %></a></td>
+                            <td><a><%= cm[i].name %></a></td>
+                            <td><a><%= cm[i].carcode %></a></td>
+                            <td><a><%= rp[i].mechanicName %></a></td>
+                          </table>
                         </div>
                         <div class="boxbtn">
+                            <a href="/repairinfo/<%= rp[i].repairID %>">view</a>
                             <a href="/deleterepair/<%= rp[i].repairID %>">x</a>
                         </div>
                     </div>

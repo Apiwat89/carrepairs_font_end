@@ -18,15 +18,33 @@
           <h1>Supplier</h1>
             <div class="secondbox">
                 <div>
+                  <div class="boxid2">
+                    <table>
+                      <td><a>SupplierID</a></td>
+                      <td><a>Name</a></td>
+                      <td><a>Address</a></td>
+                    </table>
+                  </div>
                   <% for (let i = 0; i < spl.length; i++) { %>
                     <div class="item">
-                        <div class="boxid">
-                            <a href="/supplierinfo/<%= spl[i].supplierID %>">SupplierID: <%= spl[i].supplierID %></a>
-                        </div>
-                        <div class="boxbtn">
-                            <a href="/deletesupplier/<%= spl[i].supplierID %>">x</a>
-                        </div>
-                    </div>
+                      <div class="boxid">
+                        <table>
+                          <% 
+                            let supplierID = null;
+                            if (spl[i].supplierID < 10) supplierID = '00' + spl[i].supplierID;
+                            else if (spl[i].supplierID < 100) supplierID = '0' + spl[i].supplierID;
+                            else supplierID = spl[i].supplierID;
+                          %> 
+                          <td><a><%= supplierID %></a></td>
+                          <td><a><%= spl[i].name %></a></td>
+                          <td><a><%= spl[i].address %></a></td>
+                        </table>
+                      </div>
+                      <div class="boxbtn">
+                          <a href="/supplierinfo/<%= spl[i].supplierID %>">view</a>
+                          <a href="/deletesupplier/<%= spl[i].supplierID %>">x</a>
+                      </div>
+                  </div>
                   <% } %>
                 </div>
             </div>

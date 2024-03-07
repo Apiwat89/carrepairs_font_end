@@ -18,7 +18,14 @@
           <h1>Customers</h1>
             <div class="secondbox">
               <div>
-                <p>CustomerID: <%= cm_one.customerID %></p>
+                <% 
+                  let customerID = null;
+                  if (cm_one.customerID  < 10) customerID = '000' + cm_one.customerID ;
+                  else if (cm_one.customerID  < 100) customerID = '00' + cm_one.customerID ;
+                  else if (cm_one.customerID  < 1000) customerID = '0' + cm_one.customerID ;
+                  else customerID = cm_one.customerID ;
+                %> 
+                <p>CustomerID: <%= customerID %></p>
                 <p>Name: <%= cm_one.name %></p>
                 <p>Address: <%= cm_one.address %></p>
                 <p>Phone Number: <%= cm_one.phonenumber %></p>

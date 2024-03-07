@@ -14,11 +14,9 @@
   <body>
     <%- include('nav.ejs', {addpart: addpart, addcustomer: addcustomer, addsupplier: addsupplier, addrepair: addrepair}) -%>;
     <div class="mainmainbox">
+      <div class="mainbox">
+        <h1>SpareParts</h1>
       <% for (let i = 0; i < sp.length; i++) { %>
-        <div class="mainbox">
-          <% if (i == 0) { %> 
-            <h1>SpareParts</h1>
-          <% } %>
             <div class="secondbox">
               <div>
                 <img src="/picture/products/<%= sp[i].url %>" alt="">
@@ -38,8 +36,8 @@
                 <a href="/deletepart/<%= sp[i].spareID %>">X</a>
               </div>
             </div>
-        </div>
         <% } %>
+      </div>
     </div>
     <video autoplay muted loop src="./picture/move.mp4" type="video/mp4"></video>
   </body>

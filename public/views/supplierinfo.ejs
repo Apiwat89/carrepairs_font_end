@@ -18,7 +18,13 @@
           <h1>Supplier</h1>
             <div class="secondbox">
               <div>
-                <p>SupplierID: <%= spl_one.supplierID %></p>
+                <% 
+                  let supplierID = null;
+                  if (spl_one.supplierID < 10) supplierID = '00' + spl_one.supplierID;
+                  else if (spl_one.supplierID < 100) supplierID = '0' + spl_one.supplierID;
+                  else supplierID = spl_one.supplierID;
+                %> 
+                <p>SupplierID: <%= supplierID %></p>
                 <p>Name: <%= spl_one.name %></p>
                 <p>PhoneNumber: <%= spl_one.phonenumber %></p>
                 <p>Address: <%= spl_one.address %></p>

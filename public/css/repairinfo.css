@@ -57,29 +57,31 @@ body{
     justify-content: center;
     width: 90%;
     padding-bottom: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
-
 .secondbox div{
-    position: relative;
     background-color: #92c1cb;
-    height: 60vh;
-    width: 500px;
+    width: 80%;
     border-radius: 30px;
     font-weight: 600;
     font-size: 32px;
     color: #222222;
     padding: 30px;
+    text-align: center;
 }
 
-
-.secondbox > div > a{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 30px;
+.secondbox div p {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
+.secondbox > div > a:hover {
+    color: #91824d;
+}
 
 img{
     width: 100%;

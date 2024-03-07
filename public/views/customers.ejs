@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AutoShop</title>
     <link rel="shortcut icon" href="./picture/logo.png" type="image/png">
-    <link rel="stylesheet" href="/css/repairs.css">
+    <link rel="stylesheet" href="/css/supplier.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,18 +15,37 @@
     <%- include('nav.ejs', {addpart: addpart, addcustomer: addcustomer, addsupplier: addsupplier, addrepair: addrepair}) -%>;
     <div class="mainmainbox">
         <div class="mainbox">
-          <h1>Customers</h1>
+          <h1>Supplier</h1>
             <div class="secondbox">
                 <div>
+                  <div class="boxid2">
+                    <table>
+                      <td><a>CustomerID</a></td>
+                      <td><a>Name</a></td>
+                      <td><a>CarCode</a></td>
+                    </table>
+                  </div>
                   <% for (let i = 0; i < cm.length; i++) { %>
                     <div class="item">
-                        <div class="boxid">
-                            <a href="/customersinfo/<%= cm[i].customerID %>">CustomerID: <%= cm[i].customerID %></a>
-                        </div>
-                        <div class="boxbtn">
-                            <a href="/deletecustomer/<%= cm[i].customerID %>">x</a>
-                        </div>
-                    </div>
+                      <div class="boxid">
+                        <table>
+                          <% 
+                            let customerID = null;
+                            if (cm[i].customerID < 10) customerID = '000' + cm[i].customerID;
+                            else if (cm[i].customerID < 100) customerID = '00' + cm[i].customerID;
+                            else if (cm[i].customerID < 1000) customerID = '0' + cm[i].customerID;
+                            else customerID = cm[i].customerID;
+                          %> 
+                          <td><a><%= customerID %></a></td>
+                          <td><a><%= cm[i].name %></a></td>
+                          <td><a><%= cm[i].carcode %></a></td>
+                        </table>
+                      </div>
+                      <div class="boxbtn">
+                          <a href="/customersinfo/<%= cm[i].customerID %>">view</a>
+                          <a href="/deletecustomer/<%= cm[i].customerID %>">x</a>
+                      </div>
+                  </div>
                   <% } %>
                 </div>
             </div>

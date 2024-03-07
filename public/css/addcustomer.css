@@ -117,3 +117,6 @@ video{
     font-size: 20px;
 }
 
+.secondbox div input[type='submit']:hover {
+    background-color: #ffd335;
+}

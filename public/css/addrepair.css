@@ -122,6 +122,11 @@ video{
     margin-bottom: 20px;
 }
 
+.secondbox div input[type='submit']:hover {
+    background-color: #ffd335;
+}
+
+
 
 span {
     color: red;
